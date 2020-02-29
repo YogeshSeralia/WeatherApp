@@ -27,7 +27,7 @@ class MainViewModel : ViewModel(), CoroutineScope {
         get() = Dispatchers.Main + viewModelJob
 
 
-    fun loadWeatherByZIp() {
+    fun loadWeatherByZip() {
         launch {
             isloading.value = true
             val weatherByZip: WeatherResult =

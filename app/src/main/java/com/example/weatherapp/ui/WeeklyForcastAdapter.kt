@@ -30,8 +30,9 @@ class WeeklyForcastAdapter(var list: List<ListItem>) : RecyclerView.Adapter<Week
     }
 
 
-    inner class WeekDayVH(val itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class WeekDayVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
         init {
+//            itemView.findViewById(R.id.)
         }
     }
 }

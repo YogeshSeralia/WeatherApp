@@ -33,6 +33,7 @@ class WeatherRepository {
             WeeklyForcastResult.Success(
                 OpenWeatherAPI.api.getWeeklyForcastByZip(
                     NetworkUtil.concat(zipCode, country),
+                    7,
                     Constants.API_KEY
                 )
             )

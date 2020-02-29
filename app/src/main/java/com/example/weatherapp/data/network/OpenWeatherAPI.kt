@@ -15,13 +15,14 @@ object OpenWeatherAPI {
         @GET("/data/2.5/weather/")
         suspend fun getWeatherByZip(
             @Query("zip", encoded = true) zipCode: String,
-            @Query("APPID") appId: String
+            @Query("appid") appId: String
         ): WeatherByZipResponse
 
         @GET("/data/2.5/forecast/")
-        fun getWeeklyForcastByZip(
-            @Query("q", encoded = true) zipCodeWithCountryCode: String,
-            apiKey: String
+        suspend fun getWeeklyForcastByZip(
+            @Query("zip", encoded = true) zipCodeWithCountryCode: String,
+            @Query("cnt") noOfDays:Int,
+            @Query("appid") apiKey: String
         ): WeeklyForcastResponse
     }
 

@@ -1,9 +1,21 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp">
+    >
+
+    <ImageView
+        android:id="@+id/imgvw_weather"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:scaleType="centerCrop"
+        android:alpha="0.4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="Showing Weather Status" />
+
 
     <TextView
         android:id="@+id/cityName"
@@ -18,33 +30,29 @@
         android:id="@+id/waether"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/waetherDesc"
+        app:layout_constraintTop_toBottomOf="@+id/cityName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/waetherDesc" />
+        />
 
 
     <TextView
         android:id="@+id/waetherDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:text=""
-        app:layout_constraintStart_toEndOf="@+id/waether"
-        app:layout_constraintTop_toBottomOf="@id/cityName" />
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/waether" />
 
     <TextView
         android:id="@+id/temp_celcius"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text=""
-        android:textSize="45sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="60sp"
+        app:layout_constraintTop_toBottomOf="@id/waetherDesc"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/waetherDesc" />
+        />
 
     <TextView
         android:id="@+id/wind_speed"
@@ -52,7 +60,8 @@
         android:layout_height="wrap_content"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/waetherDesc" />
+        app:layout_constraintLeft_toRightOf="@id/temp_celcius"
+        app:layout_constraintBottom_toTopOf="@+id/humidity_percent"/>
 
     <TextView
         android:id="@+id/humidity_percent"
@@ -60,7 +69,7 @@
         android:layout_height="wrap_content"
         android:text=""
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/wind_speed" />
-
+        app:layout_constraintTop_toBottomOf="@id/wind_speed"
+        app:layout_constraintBaseline_toBaselineOf="@id/temp_celcius"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
