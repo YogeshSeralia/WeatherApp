@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/shimmerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/placeholder_cityName"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@color/shimmer_color"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/placeholder_waether"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/shimmer_color"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/placeholder_waetherDesc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/placeholder_waetherDesc" />
+
+
+        <TextView
+            android:id="@+id/placeholder_waetherDesc"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@color/shimmer_color"
+            app:layout_constraintStart_toEndOf="@+id/placeholder_waether"
+            app:layout_constraintTop_toBottomOf="@id/placeholder_cityName" />
+
+        <TextView
+            android:id="@+id/placeholder_temp_celcius"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/shimmer_color"
+            android:textSize="45sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/placeholder_waetherDesc" />
+
+        <TextView
+            android:id="@+id/placeholder_wind_speed"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@color/shimmer_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/placeholder_waetherDesc" />
+
+        <TextView
+            android:id="@+id/placeholder_humidity_percent"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:background="@color/shimmer_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/placeholder_wind_speed" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.facebook.shimmer.ShimmerFrameLayout>
